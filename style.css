@@ -1,0 +1,221 @@
+/* Defini o margin e o padding para 0, para que possamos manipular essas dimensões posteriormente */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* atribui-se uma fonte para os nossos textos */
+body{
+    font-family: 'Trebuchet MS';
+    background: #fff url(imagens/fundo.png) repeat-x ;
+}
+/* defini-se a largura que nosso container terá, para que nossas informações possam estar bem posicionadas */
+#container{
+    width: 800px;
+    margin: 0 auto;
+}
+/* define as medidas que o conteudo do nosso header terá, além da imagem */
+#header{
+    height: 150px;
+    background: url(imagens/detalhe-topo.png) no-repeat right top;
+    padding-top: 20px;
+}
+/* Tamanho da logo  */
+img.logo{
+    width: 150px;
+    height: 70px;
+}
+
+
+/* define-se a cor de quando o link foi visitado e quando o mouse passa por cima do link, respectivamente */
+a:link, a:visited{
+    color: #b10333;
+    padding: 2px;
+}
+
+a:hover{
+    color: #e50040;
+}
+
+/* Retira dos itens lista o marcador, em listas normalmente um quadradinho ou uma blinha em cada elemtento e aqui ós retiramos esses marcadores */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Esse id dá um fundo para os links do header fazendo com que eles fiquem com o fundo vermelho, além de organizar suas posições */
+#header ul {
+    margin-top: 30px;
+    background: #b10333;
+    float: left;
+}
+/* Organiza os itens lista para a esquerda para que assim fiquem em uma liha ao invés de colunas */
+#header ul li {
+    float: left;
+}
+/* Dá a cor branca para a fonte, organiza o tamanho de cada espaço de link, coloca-se uma imagem que representa um divisor entre cada parte/link */
+#header ul a {
+    font-size: 15px;
+    display: block;
+    padding: 5px 20px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff;
+    background: url(imagens/divisor.png) no-repeat left center;
+}
+/* Permite que quando passamos o mouse nos links do header possa mudar a cor dos links  */
+#header ul a:hover{
+    color: #69001d;
+}
+
+/* Damos um espaçamento entre o header e o conteudo do nosso site  */
+#conteudo{
+    margin-top: 70px;
+    background: #f5f5f5;
+}
+/* Organiza o espaço */
+#principal{
+    width: 250px;
+    float: left;
+    margin: 0 0 20px 200px;
+}
+/* Na pagina fotos, cria uma unica coluna e constroi suas dimensões  */
+#uma-coluna #principal{
+   width: 750px;
+    margin: 0 0 20px 0;
+}  
+/* Na pagina brassil determina o tamanho da nossa coluna  */
+#duas-colunas #principal{
+    width: 500px;
+}
+/* Organiza a localização da segunda coluna  */
+#secundario{
+    width: 250px;
+    float: left;
+}
+/* Organiza a lateral com os nomes a colocanfdo do nosso lado direito, através da manipulação dos numeros  */
+#nomes{
+    width: 200px;
+    float: left;
+    margin: 0 0 20px -750px;
+}
+
+
+/* Colocamos um distanciamento do conteudo e do header e colocarmos a imagem de fundo que fica em cada uma das colunas, a imagem cheia de risco na diagonal presente atrás de cada um deles */
+.caixa{
+    margin: 15px 0;
+    padding: 5px;
+    background: #f3f3f3 url(imagens/fundo-caixa.png);
+}
+/* Trabalhamos com a fonte e cor da fonte nas informações "Novas Tecnologias" */
+h2{
+    font-size: 15px;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+}
+/* Damos um fundo para nossas caixas de conteudo, um fundo branco  */
+.caixa-conteudo{
+    background: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+
+/*Trabalhamos a fonte, cor e espaçamento dos links da lateral  */
+#nomes ul a {
+    font-size: 15px;
+    padding: 5px;
+    display: block;
+    line-height: 25px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f3f3;
+}
+/* a:houver da nossa lateral, podemos passar o mouse pelos links */
+#nomes ul a:hover{
+    background: #f9f9f9 url(imagens/marcador.png) no-repeat left center;
+    padding-left: 20px;
+    color: #a1a1a1;
+
+}
+
+/* No local onde deve-se inserir o e-mail do usuario damos um fundo branco e organizamos fonte e sua "borda" */
+input{
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 120px;
+    font-size: 15px;
+    background-color: #fff;
+}
+/* No local "cadastrar" damos cor ao botão e tamanho */
+input#cadastrar{
+    width: 90px;
+    color: #fff;
+    background-color: #b10333;
+    border: 1px solid #870529;
+    
+}
+
+
+/* Organizamos o tamanho das imagens das principais informações do no site, aqui usamos o width com porcentagemm para que as imagens possam ocupar essa porcentagem de espaço do nosso container  */
+img.imagem-principal{
+    width: 90%;
+    border:3px solid #dfdfdf;
+}
+
+/* trabalhamos com a fonte dos texto das informações secundarias */
+h3{
+    text-transform:uppercase;
+    display: inline;
+    font-size: 15px;
+    padding: 3px;
+}
+/* O titulo da informação principal ganha o fundo vermelho e a fonte de cor branca - Destaque*/
+.destaque h3{
+    background: #b10333;
+    color: #fff;
+}
+/* O titulo da informação principal ganha o fundo vermelho e a fonte de cor branca - Entrevista com José*/
+.entrevista h3{
+    background: #de003e;
+    color: #fff;
+}
+
+/* Determina o tamanho das imagens das noticias secundarias  */
+#lista-noticias li a img{
+    width: 60px;
+    float: left;
+    margin: 5px;
+}
+/* Tira toda decoração no texto */
+#lista-noticias li a{ 
+    text-decoration: none;
+}
+/* Muda o tamanho da fonte e a cor do titulo das noticias secundarias */
+#lista-noticias li a h3{ 
+    font-size: 15px;
+    padding: 0;
+    color: #3e7ab9;
+}
+/* Cor do texto das noticias secundarias */
+#lista-noticias li a p{
+    font-size: 12px;
+    color: #000;
+}
+
+
+/* Dá a cor azul para o footer */
+footer{
+    clear: both;
+    background: #294c71;
+    padding: 20px;
+}
+/* Organiza o tamanho do footer e a cor branca para o texto */
+#rodape{
+    width: 700px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+
